@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/y-mabuchi/go-programming-language/ch3/basename1"
+	"os"
+)
 
 func main() {
-	fmt.Println("hello world")
+	for _, arg := range os.Args[1:] {
+		bn := basename1.Basename(arg)
+		fmt.Println(bn)
+	}
 }
