@@ -2,13 +2,18 @@ package main
 
 import (
 	"fmt"
-	"github.com/y-mabuchi/go-programming-language/ch3/basename2"
+	"github.com/y-mabuchi/go-programming-language/ch3/comma"
+	"log"
 	"os"
+	"strconv"
 )
 
 func main() {
 	for _, arg := range os.Args[1:] {
-		bn := basename2.Basename(arg)
-		fmt.Println(bn)
+		_, err := strconv.Atoi(arg)
+		if err != nil {
+			log.Fatalf("cannot convert to int: %v\n", err)
+		}
+		fmt.Println(comma.Comma(arg))
 	}
 }
