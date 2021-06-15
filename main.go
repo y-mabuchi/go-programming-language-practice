@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/y-mabuchi/go-programming-language/ch3/comma"
+	q3_10 "github.com/y-mabuchi/go-programming-language/ch3/q3-10"
 	"log"
 	"os"
 	"strconv"
@@ -14,6 +14,6 @@ func main() {
 		if err != nil {
 			log.Fatalf("cannot convert to int: %v\n", err)
 		}
-		fmt.Println(comma.Comma(arg))
+		fmt.Println(q3_10.Comma(arg))
 	}
 }
