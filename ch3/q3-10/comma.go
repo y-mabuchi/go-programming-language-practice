@@ -9,18 +9,11 @@ func Comma(s string) string {
 		return s
 	}
 
-	buf := []byte(s)
-	count := 0
-	for i := len(buf) - 1; i >= 0; i-- {
-		if count == 0 {
-			fmt.Println(string(buf[i]))
-			count++
-			continue
-		} else if count % 3 == 0 {
-			fmt.Println(",")
-		}
-		fmt.Println(string(buf[i]))
-		count++
+	b := []byte(s)
+
+	for i := len(b) - 1; i >= 0; i-- {
+		fmt.Println(string(b[i]))
 	}
+
 	return s
 }
